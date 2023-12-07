@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title>Data From Our Ecological Survey</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style.css" rel="stylesheet"/>
+
+</head>
+<body>
+<header>
+  <nav>
+    <a href="videos.html">Project Videos</a>
+    <a href="files.html">Project Files</a>
+    <a href="index.html">Homepage</a>
+    <a href="sql_use.html">SQL Code</a>
+    <a href="python.html">Python Code</a>
+    <a href="excel.html">Excel Usage</a>
+  </nav>
+</header>
+<section>
+  <div id="part3">
+    <h1>Results using SQL via PHPMyAdmin</h1>
+    <p>SQL stands for Structured Query Language, and is primarily used in databases. For the purposes of this project, I used an application that can filter through databases that you can manually create called Microsoft Access.</p>
+
+    <p>For Access, we'll need to make our database. The tabular design is similar to Excel, so copy and pasting the columns into Access works just fine. This is what our table looks like, inside the database:</p>
+    <br>
+    <img src="images/AccessTable.png" alt="Our table in MS Access"/>
+    <br>
+    <p>First off, there is an extra column that wasn't present in the Excel data. This column is necessary in MS Access, as it is an ID for each survey applicant. Something called a <strong>Primary Key</strong> is stored within this column. Primary keys make sure that:</p>
+    <ul>
+      <li>Our data doesn't have null values</li>
+      <li>Our data doesn't repeat</li>
+      <li>Our data shows relationships within data tables that we can create</li>
+      <li>Our data can be easily updated with the inclusion of a primary key.</li>
+    </ul>
+    <br>
+    <p>With our database, something that is cool that Access can do is use SQL to filter and sort through data. First, with the database now made, I select "Create" and then pick "Query Design" from the Menu:</p>
+    <br>
+    <img src="images/QueryRibbon.png" alt="Menu"/>
+    <br>
+    <p>A blank query should be created. I add the database to sort through with SQL:</p>
+    <br>
+    <img src="images/QueryTable.png" alt="Blank Query"/>
+    <br>
+    <p>Next, we want to select the SQL View option, to directly put in the SQL Code:</p>
+    <br>
+    <img src="images/SQLView.png" alt="SQL View"/>
+    <br>
+    <p id="Question3">The code to use for this part of answering question 3 is: "SELECT DISTINCT CountryResidence AS Country
+    FROM EcologicalSurveyData;". With this piece of code, we can see that there are 17 different countries that are represented, of where people live in:</p>
+    <br>
+    <img src="images/DistinctCountries.png" alt="Distinct Countries of Residency"/>
+    <br>
+    <p>As for the countries that the applicants are from, we use the code: "SELECT DISTINCT CountryFrom AS Country
+      FROM EcologicalSurveyData;" and we can see that there are 26 different countries:</p>
+    <br>
+    <img src="images/DistinctFrom.png" alt="Distinct Countries"/>
+    <br>
+    <p>To answer question 4, we have to look at the CountryResidence and CountryFrom columns. We need to pick the specific pieces of data that have the data "United States of America" or "United Arab Emirates" as data, and taking the corresponding Ecological Footprint data and finding the average: For the USA, the code is "SELECT AVG(EcologicalFootprint) AS 'Number_of_earths' FROM `EcologicalSurveyData`
+    WHERE CountryResidence = 'United States of America';".</p>
+    <br>
+    <img src="images/EcologicalUSAtons.png" alt="The Average Ecological Footprint in the USA"/>
+    <br>
+    <p>We can see the average is about 7.67</p>
+    <br>
+    <p>For the data in the UAE, we just change the last part of the code: "SELECT AVG(EcologicalFootprint) AS 'Number_of_earths' FROM `EcologicalSurveyData`
+    WHERE CountryResidence = 'United Arab Emirates';".</p>
+    <br>
+    <img src="images/EcologicalUAETons.png" alt="The Average Ecological Footprint in the UAE"/>
+    <br>
+    <p id="Question4">Based on the data given, the United Arab Emirates has the higher Average Ecological Footprint.</p>
+  </div>
+  
+</section>
+  <footer>
+    <p>This website was made by Amber Giza, 10-31-2023.</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title>Data From Our Ecological Survey</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style.css" rel="stylesheet"/>
+
+
+</head>
+<body>
+<header>
+  <nav>
+    <a href="videos.html">Project Videos</a>
+    <a href="files.html">Project Files</a>
+    <a href="index.html">Homepage</a>
+    <a href="sql_use.html">SQL Code</a>
+    <a href="python.html">Python Code</a>
+    <a href="excel.html">Excel Usage</a>
+  </nav>
+</header>
+<section>
+  <div id="part2">
+    <h1>Resutls using Google Colab</h1>
+    <p>Google Colab is a free to use hosting site that utilizes the Jupyter Notebook to utilize data sciences. Jupyter is a project that develops open-source software that is interactive and allows for the utilization of data science and scientific computing, while keeping a simple modular design. Google Colab is a form of Jupyter, which can utilize three programming languages: Julia, R, and Python. For the purposes of this project, we'll be using Python. We'll be explaining what the code does, as we go through each line and program - through images, and through videos.</p>
+    <br>
+    <p>Our group utilized Google Colab, because of how much experience we've had with using it, and the positive results that have come from using said service. First off, we gather the data, which was put and formatted into a csv (comma separated values) file. This is a sample of the data:</p>
+    <br>
+    <img src="images/csvSample.png" alt="Sample of the Data from Microsoft Excel"  width="700" height="400"/>
+    <br>
+    <p>With the csv file ready to go, we used Google Colab to create a new file and analyze the data.</p>
+    <br>
+    <img src="images/FirstCodeSnippet.png" alt="First Snippet of Code"/>
+    <br>
+    <p>There is a comma with my name on it, indicating that I started the development of the program. The hashtag/pound symbol is for single-line comments in Python. Second, we import a program/library known as pandas. Pandas is an open-source library that utilizes data analytics that was built using the python language. We have to import it, since it is an outside library, and we're shortening the name to "pd" in order to shorten our code. Next, we're reading in the csv file, with a pandas function called read_csv. This is then assigned a variable called survey_df. The df stands for "dataframe," which is how tables are displayed within the pandas library. Since we surveyed 120 people total, we named it survey_df. Lastly, we can display simply by coding the line "survey_df". here's the results of running this program:</p>
+    <br>
+    <img src="images/Dataframe.png" alt= "Dataframe Result" width="950" height="350"/>
+    <br>
+    <p>As you can see, it displays only the first 5 and last 5 rows of data. However, it does share similarities to Microsoft Excel:</p>
+    <ul>
+      <li>The table has rows and columns just like in Excel</li>
+      <li>Each column has a header/reference name</li>
+      <li>Each cell can store data values</li>
+    </ul>
+    <p>However, there are also some differences:</p>
+    <ul>
+      <li>The dataframe has no title displayed</li>
+      <li>Some of the data types differ from the ones in Excel</li>
+      <li>The dataframe automatically has the column headers formatted to fit and be evenly spaced</li>
+    </ul>
+    <p>Now that we have our data, we can display it and look for ways to search for outliers. In statistics, an outlier is an unusual data point that differs from the other data points. We can easily see outliers with the use of a graph called a boxplot.</p>
+    <br>
+    <img src="images/SecondCodeSnippet.png" alt="Second Snippet of Code"/>
+    <br>
+    <p>There are two comments that explains what is going on. We are graphing the outliers that are located within the column that is titled "Carbon Footprint %". We're taking the dataframe (survey_df), and then using a function that will graph the boxplot using the specified column and returning the Y-Axis that the boxplot is on. By doing this, we get a boxplot that looks like this:
+    </p>
+    <br>
+    <img src="images/FirstGraph.png" alt="Our first boxplot"/>
+    <br>
+    <p>Here's what the parts of the boxplot mean:</p>
+    <br>
+    <img src="images/CarbonFootprintBoxMeaning.png" alt="Carbon Footprint Boxplot Meaning"/>
+    <br>
+    <ul>
+      <li>The boxplot's 5 points (minimum, Q1, Q2, Q3, and maximum) are all determined by each and every datapoint.</li>
+      <li>The Minimum is the bottom-most part of the boxplot.</li>
+      <li>Q1 is the first line of the "box".</li>
+      <li>Q2 is the median and determines the midpoint of the "box" (indicated in green).</li>
+      <li>Q3 is the third line of the "box".</li>
+      <li>The Maximum is the top-most part of the boxplot.</li>
+      <li>Outliers would be identified as dots that are outside of the boxplot. This one has none.</li>
+    </ul>
+    <br>
+    <p>Next, we calculate the results for the second boxplot.</p>
+    <br>
+    <img src="images/ThirdCodeSnippet.png" alt="Third Snippet of Code"/>
+    <p>Here, we do pretty much the same thing, except the column name is different. This time, we're graphing the Ecological Footprint in GHA (Global Hectacres)</p>
+    <img src="images/SecondGraph.png" alt="The Second boxplot"/>
+    <br>
+    <p>As you can see, we do have some outliers. For the most part, the main graph is of an even width, if you exclude the outliers. With the outliers however (roughly 6), this will skew the graph. Next, we'll display our third graph, which is about the Number of Earths someone will need to live off of.</p>
+    <br>
+    <img src="images/ThirdGraphAndCode.png" alt="Third boxplot with code"/>
+    <br>
+    <p id ="Question1">Again, the main graph is of even width, but with the roughly 5 outliers, the graph will be slightly skewed. Therefore, to answer question 1, there are </p>
+  </div>
+  
+</section>
+  <footer>
+    <p>This website was made by Amber Giza, 10-31-2023.</p>
+  </footer>
+  
+</body>
+
+</html>

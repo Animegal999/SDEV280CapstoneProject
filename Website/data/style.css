@@ -1,0 +1,76 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  float: center;
+  background-color: cyan;
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+header > nav {
+  text-decoration: none;
+  overflow: hidden;
+  
+}
+
+header > nav > a {
+  overflow: hidden;
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 10px;
+  
+}
+
+header > nav > a:hover {
+  color: red;
+  
+}
+ section {
+   background-color: #f5f5f5;
+   padding: 10px;
+   margin-bottom: 20px;
+ }
+
+footer {
+  background-color: cyan;
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+
+div#part1 {
+  margin-right: 5%;
+  margin-bottom: 5%;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+section#start > h1 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+div#part1 > h2 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+div#part1 > p { 
+  font-family: 'Gill Sans', Arial, sans-serif;
+}
+
